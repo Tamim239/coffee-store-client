@@ -4,20 +4,11 @@ import { useContext, useState } from "react";
 import { AuthContext } from "../Provider/AuthProvider";
 import { IoMdClose } from "react-icons/io";
 import { FiMenu } from "react-icons/fi";
-import { InfinitySpin } from "react-loader-spinner";
 
 export const Nav = () => {
-  const { users, loading, logOut } = useContext(AuthContext);
+  const { users, logOut } = useContext(AuthContext);
   const [open, setOpen] = useState(false);
 
-
-  // if(loading){
-  //   return <div className="flex justify-center h-10 items-center"><InfinitySpin
-  //   visible={true}
-  //   width="200"
-  //   color="#4fa94d"
-  //   /></div>
-  // }
 
   const navLinks = (
     <>

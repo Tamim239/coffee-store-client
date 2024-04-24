@@ -48,6 +48,6 @@ import { ErrorPage } from "../Shared/ErrorPage";
           element: <PrivateRouter><Users></Users></PrivateRouter>,
           loader: ()=> fetch('https://coffe-store-server-liart.vercel.app/user')
         },
-      ],
-    },
+      ]
+    }
   ]);
