@@ -1,11 +1,16 @@
+import { Helmet } from "react-helmet";
 import { useLoaderData } from "react-router-dom";
 
 export const CoffeeDetails = () => {
   const coffee = useLoaderData();
-  const { name, chef, supplier, taste, category, details, price, photo } =
+  const { _id, name, chef, supplier, taste, category, details, price, photo } =
     coffee;
   return (
-    <div className="md:w-4/5 mx-auto rounded-md bg-[#F4F3F0] my-10">  
+    <div className="md:w-4/5 mx-auto rounded-md bg-[#F4F3F0] my-10"> 
+    <Helmet>
+        <meta charSet="utf-8" />
+        <title>Espresso || View {_id}</title>
+      </Helmet> 
       <div className="flex items-center gap-6">
         <div className="w-1/2 p-10">
           <img src={photo} alt="coffee" className="w-60 h-96 mx-auto" />

@@ -8,12 +8,13 @@ import { SignIn } from "../Components/SignIn";
 import { SignUp } from "../Components/SignUp";
 import { Users } from "../Components/Users";
 import { PrivateRouter } from "../Provider/PrivateRouter";
+import { ErrorPage } from "../Shared/ErrorPage";
 
  export const router = createBrowserRouter([
     {
       path: "/",
       element: <MainLayout></MainLayout>,
-    //   errorElement: ,
+      errorElement: <ErrorPage></ErrorPage>,
       children: [
         {
           path: "/",

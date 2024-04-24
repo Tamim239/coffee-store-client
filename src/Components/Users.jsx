@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Helmet } from "react-helmet";
 import { useLoaderData } from "react-router-dom";
 import Swal from "sweetalert2";
 
@@ -39,6 +40,10 @@ export const Users = () => {
 
   return (
     <div className="my-5">
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>Espresso || Users</title>
+      </Helmet>
       <div className="overflow-x-auto">
         <table className="table">
           {/* head */}

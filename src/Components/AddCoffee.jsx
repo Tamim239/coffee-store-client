@@ -1,3 +1,4 @@
+import { Helmet } from 'react-helmet';
 import Swal from 'sweetalert2'
 
 export const AddCoffee = () => {
@@ -38,6 +39,10 @@ export const AddCoffee = () => {
 
   return (
     <section className="p-4 my-5">
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>Espresso || AddCoffee</title>
+      </Helmet>
       <form
         onSubmit={handleAddCoffee}
         className="container flex flex-col mx-auto space-y-12 bg-[#eee9da] rounded-md"

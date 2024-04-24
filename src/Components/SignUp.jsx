@@ -6,6 +6,7 @@ import { useForm } from "react-hook-form";
 import { AuthContext } from "../Provider/AuthProvider";
 import AOS from 'aos';
 import 'aos/dist/aos.css'; // You can also use <link> for styles
+import { Helmet } from "react-helmet";
 
 export const SignUp = () => {
   const [showPassword, setShowPassword] = useState(false);
@@ -67,6 +68,10 @@ export const SignUp = () => {
 
   return (
     <div className="bg-[url('/log.png')] p-5 my-5 rounded-xl">
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>Espresso || SignUp</title>
+      </Helmet>
       <div data-aos="fade-down-left"
     data-aos-easing="linear"
     data-aos-duration="1500" className="w-full max-w-md mx-auto p-8 space-y-2 my-6 rounded-xl text-white border">

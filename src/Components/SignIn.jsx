@@ -6,6 +6,7 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../Provider/AuthProvider";
 import AOS from 'aos';
 import 'aos/dist/aos.css'; 
+import { Helmet } from "react-helmet";
 
 export const SignIn = () => {
   const [showPassword, setShowPassword] = useState(false);
@@ -67,6 +68,10 @@ export const SignIn = () => {
 
   return (
     <div className="bg-[url('/log.png')] p-5 my-5 rounded-xl">
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>Espresso || SignIn</title>
+      </Helmet>
       <div
         data-aos="fade-down-right"
         data-aos-duration="1000"

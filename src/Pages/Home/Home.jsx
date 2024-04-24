@@ -4,13 +4,18 @@ import { useState } from "react";
 import { Banner } from "../Banner";
 import { SubBanner } from "../SubBanner";
 import { Follow } from "../Follow";
+import { Helmet } from "react-helmet";
 
 export const Home = () => {
   const loadedCoffees = useLoaderData();
   const [coffees, setCoffees] = useState(loadedCoffees);
 
   return (
-    <div className>
+    <div>
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>Espresso || Home</title>
+      </Helmet>
       <Banner></Banner>
       <SubBanner></SubBanner>
       <h1 className="text-center text-4xl font-bold mb-10 font-rancho">
@@ -26,7 +31,7 @@ export const Home = () => {
           ></CardCoffee>
         ))}
       </div>
-       <Follow></Follow>
+      <Follow></Follow>
     </div>
   );
 };

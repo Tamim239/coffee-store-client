@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet";
 import { useLoaderData } from "react-router-dom"
 import Swal from 'sweetalert2'
 
@@ -41,6 +42,10 @@ export const UpdateCoffee = () => {
 
   return (
     <section className="p-4 my-5">
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>Espresso || UpdateCoffee</title>
+      </Helmet>
     <form
       onSubmit={handleUpdateCoffee}
       className="container flex flex-col mx-auto space-y-12 bg-[#eee9da] rounded-md"
